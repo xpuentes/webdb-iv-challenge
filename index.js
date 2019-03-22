@@ -20,3 +20,10 @@ db.getDish(3)
   }).catch(err => {
     console.log(err);
   });
+
+db.shoppingList('Three Cheese Pizza')
+  .then(shoppingList => {
+    console.log(shoppingList);
+  }).catch(err => {
+    console.log(err);
+  });

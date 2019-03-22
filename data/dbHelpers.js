@@ -23,5 +23,11 @@ module.exports = {
 
   addRecipe: (newRecipe) => {
     return db('recipes').insert(newRecipe);
+  },
+
+  shoppingList: (recipe) => {
+    return db('ingredients')
+            .innerJoin('recipes', 'recipe_id', 'recipes.id')
+            .where('recipes.recipe', recipe);
   }
 }
