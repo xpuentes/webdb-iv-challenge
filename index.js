@@ -14,7 +14,7 @@ db.getRecipes()
     console.log(err);
   });
 
-db.getDish(2)
+db.getDish(3)
   .then(dish => {
     console.log('List of selected dish w/ related recipes', dish);
   }).catch(err => {
